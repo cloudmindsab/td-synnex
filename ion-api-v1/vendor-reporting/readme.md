@@ -16,3 +16,7 @@ In this first release, powershell will be released first, then I will release Py
 
 I use postman to collect and create my requests. Then I translate requests to powershell and python.
 if you want to receive updated postman collection for total management, give me a ping. The fundamental postman collection and environment .json files can be found here in the postman folder.
+
+## Azure Automation - Automate execution of inventory
+
+All ps-scripts starting with "aa-" is aimed for Azure Automation Runbooks.

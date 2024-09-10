@@ -1,0 +1,21 @@
+CREATE TABLE [dbo].[TABLE_STREAMONE_ION_REPORTING_DATA_AWS]
+(
+    [ID]	int IDENTITY(1,1) PRIMARY KEY
+	,[date]	       NVARCHAR(20)
+	,[customerId]	NVARCHAR(50)
+    ,[customerName]	       NVARCHAR(50)
+    ,[contactName]	NVARCHAR(70)
+    ,[fxRate]	NVARCHAR(MAX)
+	,[billingMonth]	NVARCHAR(20)
+    ,[cloudType]	NVARCHAR(20)
+    ,[cloudAccountID]	NVARCHAR(70)
+    ,[cloudAccountType]	NVARCHAR(70)
+    ,[resourceType]	NVARCHAR(MAX)
+    ,[category]	       NVARCHAR(MAX)
+    ,[cost]	       NVARCHAR(30)
+    ,[price]	       NVARCHAR(30)
+    ,[profit]	       NVARCHAR(30)
+    ,[markup]	       NVARCHAR(30)
+    ,[margin]	       NVARCHAR(30)
+	,[currency]	       NVARCHAR(10)
+)

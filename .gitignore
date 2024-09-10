@@ -1,0 +1,4 @@
+## Excluded files
+*.DS_Store
+*.txt
+*-dev.*

@@ -1,0 +1,1365 @@
+{
+	"info": {
+		"_postman_id": "db4ba7a5-e56b-44ad-bf4b-3a02bbc59b7f",
+		"name": "TDS ION V3 APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5803931"
+	},
+	"item": [
+		{
+			"name": "1. Get oAuth Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"var res =  pm.response.json()\r",
+							"pm.environment.set(\"refresh_token\", res.refresh_token)\r",
+							"pm.environment.set(\"access_token\", res.access_token)\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost/",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "{{refresh_token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/oauth/token",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2a. Create Customer - US",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"customerOrganization\", \"US NCE Customer\")\r",
+							"pm.collectionVariables.set(\"customerAddress.street\", \"1713 W HILLS AVENUE\")\r",
+							"pm.collectionVariables.set(\"customerAddress.city\", \"Tampa\")\r",
+							"pm.collectionVariables.set(\"customerAddress.state\", \"FL\")\r",
+							"pm.collectionVariables.set(\"customerAddress.zip\", \"33606-3222\")\r",
+							"pm.collectionVariables.set(\"customerAddress.country\", \"US\")\r",
+							"pm.collectionVariables.set(\"customerName\", \"TDS Test Customer\")\r",
+							"pm.collectionVariables.set(\"customerEmail\", \"1237@gmail.com\") // must be unique\r",
+							"pm.collectionVariables.set(\"customerTitle\", \"Owner\")\r",
+							"pm.collectionVariables.set(\"customerPhone\", \"8135454856\")             \r",
+							"pm.collectionVariables.set(\"languageCode\", \"EN\")\r",
+							"\r",
+							"// Optional properties. \r",
+							"pm.collectionVariables.set(\"alternateEmail\", \"1234@gmail.com\" )                   \r",
+							"pm.collectionVariables.set(\"primaryContactFirstName\", \"Patrick\")         \r",
+							"pm.collectionVariables.set(\"primaryContactLastName\", \"Hitch\")     \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// save values in case we need to use in later requests\r",
+							"var res =  pm.response.json()\r",
+							"var x = JSON.stringify(res)\r",
+							"pm.collectionVariables.set(\"customer.create.response\", x)\r",
+							"let name = res.name\r",
+							"let idi = name.lastIndexOf(\"/\")\r",
+							"var customerId = name.substring(idi + 1)\r",
+							"let userId = res.uid\r",
+							"pm.collectionVariables.set(\"customer.id\", customerId)\r",
+							"pm.collectionVariables.set(\"customer.response.uri\", name)\r",
+							"pm.collectionVariables.set(\"customer.userId\", userId)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerOrganization\": \"{{customerOrganization}}\",\r\n    \"customerAddress\": {\r\n        \"street\": \"{{customerAddress.street}}\",\r\n        \"city\": \"{{customerAddress.city}}\",\r\n        \"state\": \"{{customerAddress.state}}\",\r\n        \"zip\": \"{{customerAddress.zip}}\",\r\n        \"country\": \"{{customerAddress.country}}\"\r\n    },\r\n    \"customerName\": \"{{customerName}}\",\r\n    \"customerEmail\": \"{{customerEmail}}\",\r\n    \"customerTitle\": \"{{customerTitle}}\",\r\n    \"customerPhone\": \"{{customerPhone}}\",\r\n    \"alternateEmail\": \"{{alternateEmail}}\",\r\n    \"primaryContactFirstName\": \"{{primaryContactFirstName}}\",\r\n    \"primaryContactLastName\": \"{{primaryContactLastName}}\",\r\n    \"languageCode\": \"{{languageCode}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2b. Create Customer - FR",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"customerOrganization\", \"French Customer 1\")\r",
+							"pm.collectionVariables.set(\"customerAddress.street\", \"4 rue Niepce\")\r",
+							"pm.collectionVariables.set(\"customerAddress.city\", \"Paris\")\r",
+							"pm.collectionVariables.set(\"customerAddress.state\", \"Paris\")\r",
+							"pm.collectionVariables.set(\"customerAddress.zip\", \"75014\")\r",
+							"pm.collectionVariables.set(\"customerAddress.country\", \"FR\")\r",
+							"pm.collectionVariables.set(\"customerName\", \"TDS Test Customer\")\r",
+							"pm.collectionVariables.set(\"customerEmail\", \"pifzxczxc2@gmail.com\") // must be unique\r",
+							"pm.collectionVariables.set(\"customerTitle\", \"Owner\")\r",
+							"pm.collectionVariables.set(\"customerPhone\", \"8135454856\")             \r",
+							"pm.collectionVariables.set(\"languageCode\", \"EN\")\r",
+							"\r",
+							"// Optional properties. \r",
+							"pm.collectionVariables.set(\"alternateEmail\", \"sdfsdf8@gmail.com\" )                   \r",
+							"pm.collectionVariables.set(\"primaryContactFirstName\", \"Patrick\")         \r",
+							"pm.collectionVariables.set(\"primaryContactLastName\", \"Hitch\")     \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// save values in case we need to use in later requests\r",
+							"var res =  pm.response.json()\r",
+							"var x = JSON.stringify(res)\r",
+							"pm.collectionVariables.set(\"customer.create.response\", x)\r",
+							"let name = res.name\r",
+							"let idi = name.lastIndexOf(\"/\")\r",
+							"var customerId = name.substring(idi + 1)\r",
+							"pm.collectionVariables.set(\"customer.id\", customerId)\r",
+							"pm.collectionVariables.set(\"customer.response.uri\", name)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerOrganization\": \"{{customerOrganization}}\",\r\n    \"customerAddress\": {\r\n        \"street\": \"{{customerAddress.street}}\",\r\n        \"city\": \"{{customerAddress.city}}\",\r\n        \"state\": \"{{customerAddress.state}}\",\r\n        \"zip\": \"{{customerAddress.zip}}\",\r\n        \"country\": \"{{customerAddress.country}}\"\r\n    },\r\n    \"customerName\": \"{{customerName}}\",\r\n    \"customerEmail\": \"{{customerEmail}}\",\r\n    \"customerTitle\": \"{{customerTitle}}\",\r\n    \"customerPhone\": \"{{customerPhone}}\",\r\n    \"alternateEmail\": \"{{alternateEmail}}\",\r\n    \"primaryContactFirstName\": \"{{primaryContactFirstName}}\",\r\n    \"primaryContactLastName\": \"{{primaryContactLastName}}\",\r\n    \"languageCode\": \"{{languageCode}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2c. Get List of Customers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers?pageSize=1000",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2d. Get Customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response should be okay to process\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2e. Update Customer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"customerOrganization\", \"TDS Test Org\")\r",
+							"pm.collectionVariables.set(\"customerAddress.street\", \"424 Summit Chase Drive\")\r",
+							"pm.collectionVariables.set(\"customerAddress.city\", \"Valrico\")\r",
+							"pm.collectionVariables.set(\"customerAddress.state\", \"FL\")\r",
+							"pm.collectionVariables.set(\"customerAddress.zip\", \"33594\")\r",
+							"pm.collectionVariables.set(\"customerAddress.country\", \"US\")\r",
+							"pm.collectionVariables.set(\"customerName\", \"TDS Test Customer\")\r",
+							"pm.collectionVariables.set(\"customerEmail\", \"pxxcvxcv@gmail.com\") // must be unique\r",
+							"pm.collectionVariables.set(\"customerTitle\", \"Owner\")\r",
+							"pm.collectionVariables.set(\"customerPhone\", \"8135454865\")             \r",
+							"pm.collectionVariables.set(\"languageCode\", \"EN\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"accounts/{{accountId}}/customers/{{customer.id}}\",\r\n    \"customerOrganization\": \"{{customerOrganization}}\",\r\n    \"customerAddress\": {\r\n        \"street\": \"{{customerAddress.street}}\",\r\n        \"city\": \"{{customerAddress.city}}\",\r\n        \"state\": \"{{customerAddress.state}}\",\r\n        \"zip\": \"{{customerAddress.zip}}\",\r\n        \"country\": \"US\"\r\n    },\r\n    \"customerEmail\": \"{{customerEmail}}\",\r\n    \"customerTitle\": \"{{customerTitle}}\",\r\n    \"languageCode\": \"{{languageCode}}\",\r\n    \"customerName\": \"{{customerName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3a. Get List of Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"var x = pm.response.json()\r",
+							"console.log(x)\r",
+							"console.log(x.length)\r",
+							"for (let n = 0; n < x.length; ++n)\r",
+							"{\r",
+							"    // if ( x[n].displayName.contains(\"E3\"))\r",
+							"    // {\r",
+							"    //     console.log(x[n])\r",
+							"    // }\r",
+							"    console.log(x[n])\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/products?filter.name=Microsoft&pageSize=1000",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"products"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en",
+							"disabled": true
+						},
+						{
+							"key": "priceBookCustomerId",
+							"value": "12345",
+							"disabled": true
+						},
+						{
+							"key": "productVersion",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "excludeCategories",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "excludeVerticals",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "excludeCharges",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "filter.name",
+							"value": "Microsoft"
+						},
+						{
+							"key": "filter.skuExternalId",
+							"value": "US,CFQ7TTC0LF8Q,0001",
+							"disabled": true
+						},
+						{
+							"key": "filter.addonExternalId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "filter.sku_display_name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "filter.addonName",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1000"
+						},
+						{
+							"key": "filter.sku_id",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3b. Get Product Details",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"productId\", \"Microsoft365EandF-smp\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/products/{{productId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"products",
+						"{{productId}}"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en",
+							"disabled": true
+						},
+						{
+							"key": "priceBookCustomerId",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "productVersion",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "excludeCategories",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "excludeVerticals",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "excludeCharges",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "filter.skuExternalId",
+							"value": "US,CFQ7TTC0LF8Q,0001",
+							"disabled": true
+						},
+						{
+							"key": "filter.addonExternalId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "filter.skuName",
+							"value": "Office 365 E1",
+							"disabled": true
+						},
+						{
+							"key": "filter.addonName",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4a. Get all templates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/provisionTemplates",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"provisionTemplates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4b. Get Template By Id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"provisioningtemplate.id\", \"provisiontemplate33\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/provisionTemplates/{{provisioningtemplate.id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"provisionTemplates",
+						"{{provisioningtemplate.id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4b. Get Microsoft Create Template",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/provisionTemplates?vendor=MICROSOFT&action=CREATE",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"provisionTemplates"
+					],
+					"query": [
+						{
+							"key": "vendor",
+							"value": "MICROSOFT"
+						},
+						{
+							"key": "action",
+							"value": "CREATE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5a. Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders?pageSize=100",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "100"
+						},
+						{
+							"key": "status",
+							"value": "ON_HOLD",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5b. Place Order - NCE",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"providerName\", \"AZURE\")\r",
+							"pm.collectionVariables.set(\"referenceId\", \"reseller.system.id\")\r",
+							"\r",
+							"pm.collectionVariables.set(\"productId\", \"OFFICE365NCE--smpnce\")\r",
+							"pm.collectionVariables.set(\"skuId\", \"Office-365-E1-n1\")\r",
+							"pm.collectionVariables.set(\"planId\", \"Monthly-n23\")\r",
+							"pm.collectionVariables.set(\"quantity\", \"3\")\r",
+							"\r",
+							"pm.collectionVariables.set(\"domain\",\"s1devTst2023112800\")\r",
+							"pm.collectionVariables.set(\"agreementDate\", \"2023-10-08\")\r",
+							"pm.collectionVariables.set(\"contact.email\", \"pxx5sdfsdf@gmail.com\")\r",
+							"pm.collectionVariables.set(\"contact.firstName\", \"Test\")\r",
+							"pm.collectionVariables.set(\"contact.lastName\", \"Customer\")\r",
+							"pm.collectionVariables.set(\"contact.phoneNumber\", \"8135454856\")\r",
+							"\r",
+							"pm.collectionVariables.set(\"custom.term.enddate\", \"2023-11-30\")\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response successful with JSON body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// save values in case we need to use in later requests\r",
+							"var res =  pm.response.json()\r",
+							"var x = JSON.stringify(res)\r",
+							"pm.collectionVariables.set(\"order.create.response\", x)\r",
+							"let name = res.name\r",
+							"let idi = name.lastIndexOf(\"/\")\r",
+							"var orderId = name.substring(idi + 1)\r",
+							"pm.collectionVariables.set(\"order.id\", orderId)\r",
+							"pm.collectionVariables.set(\"order.response.uri\", name)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"referenceId\": \"NCE Order Test\",\r\n    \"displayName\": \"Office 365 NCE\",\r\n    \"orderItems\": [\r\n        {\r\n            \"referenceId\": \"{{referenceId}}\",\r\n            \"productId\": \"{{productId}}\",\r\n            \"skuId\": \"{{skuId}}\",\r\n            \"planId\": \"{{planId}}\",\r\n            \"action\": \"CREATE\",\r\n            \"quantity\": {{quantity}},\r\n            \"providerName\": \"{{providerName}}\",\r\n            \"attributes\": [\r\n                {\r\n                    \"name\": \"domainName\",\r\n                    \"value\": \"{{domain}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementDateAgreed\",\r\n                    \"value\": \"{{agreementDate}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementUserId\",\r\n                    \"value\": \"{{customer.userId}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementEmail\",\r\n                    \"value\": \"{{contact.email}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementFirstName\",\r\n                    \"value\": \"{{contact.firstName}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementLastName\",\r\n                    \"value\": \"{{contact.lastName}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementPhoneNumber\",\r\n                    \"value\": \"{{contact.phoneNumber}}\"\r\n                },\r\n                {\r\n                    \"name\":   \"customTermEndDate\",\r\n                    \"value\" : \"{{custom.term.enddate}}\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5c. Get Order Details",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders/{{order.id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders",
+						"{{order.id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5d. Update Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"referenceId\": \"NCE Order Test\",\r\n    \"displayName\": \"Office 365 NCE\",\r\n    \"orderItems\": [\r\n        {\r\n            \"referenceId\": \"{{referenceId}}\",\r\n            \"productId\": \"{{productId}}\",\r\n            \"skuId\": \"{{skuId}}\",\r\n            \"planId\": \"{{planId}}\",\r\n            \"action\": \"CREATE\",\r\n            \"quantity\": {{quantity}},\r\n            \"providerName\": \"{{providerName}}\",\r\n            \"attributes\": [\r\n                {\r\n                    \"name\": \"domainName\",\r\n                    \"value\": \"{{domain}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementDateAgreed\",\r\n                    \"value\": \"{{agreementDate}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementUserId\",\r\n                    \"value\": \"{{contact.userId}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementEmail\",\r\n                    \"value\": \"{{contact.email}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementFirstName\",\r\n                    \"value\": \"{{contact.firstName}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementLastName\",\r\n                    \"value\": \"{{contact.lastName}}\"\r\n                },\r\n                {\r\n                    \"name\": \"agreementPhoneNumber\",\r\n                    \"value\": \"{{contact.phoneNumber}}\"\r\n                },\r\n                {\r\n                    \"name\":   \"customTermEndDate\",\r\n                    \"value\" : \"2023-10-31\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5e. Cancel Order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders/{{order.id}}:cancel",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders",
+						"{{order.id}}:cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5f. Get Microsoft Update Template",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/provisionTemplates?vendor=MICROSOFT&action=UPDATE",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"provisionTemplates"
+					],
+					"query": [
+						{
+							"key": "vendor",
+							"value": "MICROSOFT"
+						},
+						{
+							"key": "action",
+							"value": "UPDATE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5g. Increase Seats",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//pm.collectionVariables.set(\"productId\", \"OFFICE365NCE--smpnce\")\r",
+							"//pm.collectionVariables.set(\"skuId\", \"Office-365-E1-n1\")\r",
+							"//pm.collectionVariables.set(\"planId\", \"Monthly-n23\")\r",
+							"pm.collectionVariables.set(\"quantity\", \"2\")\r",
+							"pm.collectionVariables.set(\"resourceId\", \"2134231412341234\")\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"displayName\": \"SPSS With Addons\",\r\n    \"orderItems\": [\r\n        {\r\n            \"productId\": \"{{productId}}\",\r\n            \"skuId\": \"{{skuId}}\",\r\n            \"planId\": \"{{planId}}\",\r\n            \"action\": \"UPDATE\",\r\n            \"quantity\": {{quantity}},\r\n            \"resourceId\": \"{{resourceId}}\",\r\n            \"attributes\": [\r\n                {\r\n                    \"name\": \"operations\",\r\n                    \"value\": \"updatesubscription\"\r\n                },\r\n                {\r\n                    \"name\": \"renewalSetting\",\r\n                    \"value\": \"auto-off\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5h. Toggle Autorenewal OFF",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"productId\", \"OFFICE365NCE--smpnce\")\r",
+							"pm.collectionVariables.set(\"skuId\", \"Office-365-E1-n1\")\r",
+							"pm.collectionVariables.set(\"planId\", \"Monthly-n23\")\r",
+							"pm.collectionVariables.set(\"quantity\", \"3\")\r",
+							"pm.collectionVariables.set(\"resourceId\", \"21341234123421342134\")\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"displayName\": \"Microsoft NCE\",\r\n    \"orderItems\": [\r\n        {\r\n            \"productId\": \"{{productId}}\",\r\n            \"skuId\": \"{{skuId}}\",\r\n            \"planId\": \"{{planId}}\",\r\n            \"action\": \"UPDATE\",\r\n            \"quantity\": {{quantity}},\r\n            \"resourceId\": \"{{resourceId}}\",\r\n            \"attributes\": [\r\n                {\r\n                    \"name\": \"operations\",\r\n                    \"value\": \"updatesubscription\"\r\n                },\r\n                {\r\n                    \"name\": \"renewalSetting\",\r\n                    \"value\": \"auto-off\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/orders/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5i. Get Cloud Profile",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//pm.collectionVariables.set(\"customer.id\", \"\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/cloudProfile",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"cloudProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6a. Get Subscriptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/subscriptions?subscription_id={{resourceId}}&customerId={{customer.id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"subscriptions"
+					],
+					"query": [
+						{
+							"key": "start_date_range.relative_date_range",
+							"value": "QUARTER_TO_DATE",
+							"disabled": true
+						},
+						{
+							"key": "subscription_status",
+							"value": "initiated",
+							"disabled": true
+						},
+						{
+							"key": "reseller_id",
+							"value": "2767",
+							"disabled": true
+						},
+						{
+							"key": "subscription_id",
+							"value": "{{resourceId}}"
+						},
+						{
+							"key": "customerId",
+							"value": "{{customer.id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6b. Get Subcription Details",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"subscriptionId\", \"\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v3/accounts/{{accountId}}/customers/{{customer.id}}/subscriptions/{{subscriptionId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"{{accountId}}",
+						"customers",
+						"{{customer.id}}",
+						"subscriptions",
+						"{{subscriptionId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-key",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "api-secret",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "accountId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "customerOrganization",
+			"value": ""
+		},
+		{
+			"key": "customerAddress.street",
+			"value": ""
+		},
+		{
+			"key": "customerAddress.city",
+			"value": ""
+		},
+		{
+			"key": "customerAddress.state",
+			"value": ""
+		},
+		{
+			"key": "customerAddress.zip",
+			"value": ""
+		},
+		{
+			"key": "customerAddress.country",
+			"value": ""
+		},
+		{
+			"key": "customerName",
+			"value": ""
+		},
+		{
+			"key": "customerEmail",
+			"value": ""
+		},
+		{
+			"key": "customerTitle",
+			"value": ""
+		},
+		{
+			"key": "customertPhone",
+			"value": ""
+		},
+		{
+			"key": "alternateEmail",
+			"value": ""
+		},
+		{
+			"key": "customerDomain",
+			"value": ""
+		},
+		{
+			"key": "primaryContactFirstName",
+			"value": ""
+		},
+		{
+			"key": "primaryContactLastName",
+			"value": ""
+		},
+		{
+			"key": "languageCode",
+			"value": ""
+		},
+		{
+			"key": "customerPhone",
+			"value": ""
+		},
+		{
+			"key": "defaultUserName",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "defaultUserPassword",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "customer.create.response",
+			"value": ""
+		},
+		{
+			"key": "customer.response.uri",
+			"value": ""
+		},
+		{
+			"key": "customer.id",
+			"value": ""
+		},
+		{
+			"key": "productId",
+			"value": ""
+		},
+		{
+			"key": "referenceId",
+			"value": ""
+		},
+		{
+			"key": "refresh_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "api-key",
+			"value": ""
+		},
+		{
+			"key": "api-secret",
+			"value": ""
+		},
+		{
+			"key": "orderId",
+			"value": ""
+		},
+		{
+			"key": "subscriptionId",
+			"value": ""
+		},
+		{
+			"key": "customer.userId",
+			"value": ""
+		},
+		{
+			"key": "provisioningtemplate.id",
+			"value": ""
+		},
+		{
+			"key": "providerName",
+			"value": ""
+		},
+		{
+			"key": "skuId",
+			"value": ""
+		},
+		{
+			"key": "planId",
+			"value": ""
+		},
+		{
+			"key": "quantity",
+			"value": ""
+		},
+		{
+			"key": "domain",
+			"value": ""
+		},
+		{
+			"key": "agreementDate",
+			"value": ""
+		},
+		{
+			"key": "contact.email",
+			"value": ""
+		},
+		{
+			"key": "contact.firstName",
+			"value": ""
+		},
+		{
+			"key": "contact.lastName",
+			"value": ""
+		},
+		{
+			"key": "contact.phoneNumber",
+			"value": ""
+		},
+		{
+			"key": "custom.term.enddate",
+			"value": ""
+		},
+		{
+			"key": "order.create.response",
+			"value": ""
+		},
+		{
+			"key": "order.id",
+			"value": ""
+		},
+		{
+			"key": "order.response.uri",
+			"value": ""
+		},
+		{
+			"key": "resourceId",
+			"value": ""
+		},
+		{
+			"key": "host",
+			"value": "https://platformurl.com/v3/api",
+			"type": "string"
+		},
+		{
+			"key": "customer.id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

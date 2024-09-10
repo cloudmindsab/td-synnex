@@ -1,0 +1,2571 @@
+{
+    "success": true,
+    "message": "Report data for the selected period",
+    "currencyOption": {
+        "costCurrency": "SEK",
+        "priceCurrency": "SEK"
+    },
+    "data": [
+        {
+            "entity": {
+                "id": "23045",
+                "type": "customer",
+                "company": "SIE Google Demo Customer",
+                "name": "Eric Holler",
+                "conversion_rates": [
+                    "USD 1 -> SEK 9.466111321469 (Rate at end of invoice month (2022-02-28))"
+                ]
+            },
+            "lines": [
+                {
+                    "entity": {
+                        "id": "01064f-1b19da-236ea0",
+                        "type": "subscription"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "<billing account 01064f-1b19da-236ea0>",
+                                "type": "resource_group",
+                                "cost_currency": "SEK",
+                                "price_currency": "SEK"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Support",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "GCP Support Base fee for Standard Support",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "274.5123154108",
+                                                "cost": "260.7866996403",
+                                                "usage": "1.0000000000",
+                                                "unit": "month"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "entity": {
+                        "id": "01be1e-b4daf3-47cf91",
+                        "type": "subscription"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "gcpproject2-322818",
+                                "type": "resource_group",
+                                "cost_currency": "SEK",
+                                "price_currency": "SEK"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Compute Engine",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "E2 Instance Core running in Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "69.3742355168",
+                                                "cost": "65.9055237410",
+                                                "usage": "336.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "E2 Instance Ram running in Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "37.1944748201",
+                                                "cost": "35.3347510791",
+                                                "usage": "1344.0000000000",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "External IP Charge on a Standard VM",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "12.7224536161",
+                                                "cost": "12.0863309353",
+                                                "usage": "672.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Ubuntu 16.04 (Xenial Xerus) (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1344.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Ubuntu 16.04 (Xenial Xerus) (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1344.0000000000",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0351801179",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.1236699298",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Ingress via Carrier Peering Network - Americas Based",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000007236",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000125114",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000056829",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000122003",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Finland",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000058990",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Frankfurt",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000021774",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Hong Kong",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000006333",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Jakarta",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000053796",
+                                                "cost": "0.0000051108",
+                                                "usage": "0.0000037886",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Las Vegas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000003881",
+                                                "cost": "0.0000003692",
+                                                "usage": "0.0000041015",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to London",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000075772",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Los Angeles",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000003588",
+                                                "cost": "0.0000003408",
+                                                "usage": "0.0000037886",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Mumbai",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000018943",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Netherlands",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000018943",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Osaka",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000018943",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Salt Lake City",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000293",
+                                                "cost": "0.0000000284",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Sao Paulo",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000056829",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Seoul",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000043033",
+                                                "cost": "0.0000040884",
+                                                "usage": "0.0000056829",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Singapore",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000113659",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Sydney",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000018943",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000001212",
+                                                "cost": "0.0000001155",
+                                                "usage": "0.0000012815",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000123037",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from APAC to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000050506",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from EMEA to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000210069",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Finland to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000047190",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Frankfurt to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000042040",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Hong Kong to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000120429",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Jakarta to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000027325",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Japan to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000009825",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Las Vegas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000155549",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from London to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000065193",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Los Angeles to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000027288",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Montreal to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000094995",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Mumbai to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000025565",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Netherlands to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000020349",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Osaka to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000012526",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Salt Lake City to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Santiago to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sao Paulo to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000057975",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Seoul to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000046073",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Singapore to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000091288",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sydney to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000025565",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Virginia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000136821",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Warsaw to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000000745",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Zurich to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000007078",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Zone Egress",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000073485",
+                                                "cost": "0.0000069813",
+                                                "usage": "0.0000776332",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Zone Ingress",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.6224815249",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0089928657",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0048681619",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to Australia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0002591291",
+                                                "cost": "0.0002461719",
+                                                "usage": "0.0001440756",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to China",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0109687675",
+                                                "cost": "0.0104203285",
+                                                "usage": "0.0050380025",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0058712494",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0127879046",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from APAC to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0046867756",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Australia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0001398902",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from China to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0047080154",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from EMEA to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0151609164",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "SSD backed PD Capacity",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "177.0162817115",
+                                                "cost": "168.1654676259",
+                                                "usage": "110.0000000000",
+                                                "unit": "gibibyte month"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Support",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "GCP Support Standard Variable fee",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "8.8703616055",
+                                                "cost": "8.4268435252",
+                                                "usage": "31.2984294891",
+                                                "unit": "USD"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "ses-gcp-project1",
+                                "type": "resource_group",
+                                "cost_currency": "SEK",
+                                "price_currency": "SEK"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Cloud Logging",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "Log Volume",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.3709184825",
+                                                "unit": "gibibyte"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Cloud Storage",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "Standard Storage US Multi-region",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.3335126108",
+                                                "cost": "0.3168369803",
+                                                "usage": "1.3550873995",
+                                                "unit": "gibibyte month"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Compute Engine",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "Balanced PD Capacity in Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "104.1272245362",
+                                                "cost": "98.9208633094",
+                                                "usage": "100.0000000000",
+                                                "unit": "gibibyte month"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "E2 Instance Core running in Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "78.1395607724",
+                                                "cost": "74.2325827338",
+                                                "usage": "336.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "E2 Instance Ram running in Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "41.8821900795",
+                                                "cost": "39.7880805755",
+                                                "usage": "1344.0000000000",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "External IP Charge on a Spot Preemptible VM",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "12.7185514748",
+                                                "cost": "12.0826239010",
+                                                "usage": "671.7938842773",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "External IP Charge on a Standard VM",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "12.7224536161",
+                                                "cost": "12.0863309353",
+                                                "usage": "672.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Container-Optimized OS - PCID Whitelisted (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1343.5877685547",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Container-Optimized OS - PCID Whitelisted (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "2687.2001953125",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Container-Optimized OS from Google (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1343.5877685547",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Container-Optimized OS from Google (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "2687.2001953125",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Google Container Engine Node (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1343.5877685547",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Google Container Engine Node (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "2687.2001953125",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for RedHat Enterprise Linux 7 (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "672.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for RedHat Enterprise Linux 7 (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1344.0000000000",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for RedHat Enterprise Linux 7 on VM with 1 to 4 VCPU",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "381.6736084816",
+                                                "cost": "362.5899280575",
+                                                "usage": "672.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Shielded COS (CPU cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "1343.5877685547",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Licensing Fee for Shielded COS (RAM cost)",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "2687.2001953125",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "11.1499986649",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Egress from Virginia to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.1308204979",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "13.7028503418",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Google Ingress from Virginia to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "3.4675588608",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Ingress via Carrier Peering Network - Americas Based",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000009667",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000099838",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000049714",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000036182",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Finland",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Frankfurt",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000027688",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Hong Kong",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0001468007",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Jakarta",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000035299",
+                                                "cost": "0.0000033529",
+                                                "usage": "0.0000024857",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Japan",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000049714",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Las Vegas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000090837",
+                                                "cost": "0.0000086303",
+                                                "usage": "0.0000959635",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to London",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000049714",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Los Angeles",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000002357",
+                                                "cost": "0.0000002234",
+                                                "usage": "0.0000024857",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Mumbai",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000024857",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Netherlands",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000024857",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Salt Lake City",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000293",
+                                                "cost": "0.0000000284",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Sao Paulo",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000074571",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Seoul",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000056475",
+                                                "cost": "0.0000053644",
+                                                "usage": "0.0000074571",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Singapore",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000049714",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Americas to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000001259",
+                                                "cost": "0.0000001202",
+                                                "usage": "0.0000013337",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000021195",
+                                                "cost": "0.0000020134",
+                                                "usage": "0.0000223881",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000050577",
+                                                "cost": "0.0000048050",
+                                                "usage": "0.0000066785",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000367664",
+                                                "cost": "0.0000349281",
+                                                "usage": "0.0000485498",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Finland",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000072473",
+                                                "cost": "0.0000068847",
+                                                "usage": "0.0000095703",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Frankfurt",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000053143",
+                                                "cost": "0.0000050483",
+                                                "usage": "0.0000070175",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Hong Kong",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000682440",
+                                                "cost": "0.0000648315",
+                                                "usage": "0.0000901157",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Jakarta",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000062126",
+                                                "cost": "0.0000059021",
+                                                "usage": "0.0000043754",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Japan",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000284",
+                                                "cost": "0.0000000265",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Las Vegas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000004440",
+                                                "cost": "0.0000004212",
+                                                "usage": "0.0000046883",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to London",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000033699",
+                                                "cost": "0.0000032014",
+                                                "usage": "0.0000044499",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Los Angeles",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000006210",
+                                                "cost": "0.0000005897",
+                                                "usage": "0.0000065630",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Montreal",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000038",
+                                                "cost": "0.0000000038",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Mumbai",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000793980",
+                                                "cost": "0.0000754279",
+                                                "usage": "0.0001048446",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Netherlands",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000051003",
+                                                "cost": "0.0000048448",
+                                                "usage": "0.0000067344",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Salt Lake City",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000293",
+                                                "cost": "0.0000000284",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Santiago",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000033870",
+                                                "cost": "0.0000032175",
+                                                "usage": "0.0000044722",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Sao Paulo",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000066831",
+                                                "cost": "0.0000063489",
+                                                "usage": "0.0000088252",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Seoul",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000066272",
+                                                "cost": "0.0000062959",
+                                                "usage": "0.0000087507",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Singapore",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000054260",
+                                                "cost": "0.0000051543",
+                                                "usage": "0.0000071647",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Egress from Virginia to Sydney",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000003171",
+                                                "cost": "0.0000003020",
+                                                "usage": "0.0000002235",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000115968",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Americas to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.6111215949",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from APAC to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000038687",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from APAC to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000057723",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Delhi to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from EMEA to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000155410",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from EMEA to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000440450",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Finland to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000011325",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Finland to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000064857",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Frankfurt to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000039097",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Frankfurt to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000065723",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Hong Kong to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0001493888",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Hong Kong to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000845082",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Jakarta to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000014799",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Jakarta to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000027735",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Japan to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000037719",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Japan to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000010058",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Las Vegas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000828337",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Las Vegas to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000030380",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from London to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000037719",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from London to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000038762",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Los Angeles to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000012675",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Los Angeles to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000037579",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Montreal to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000097603",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Montreal to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000094250",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Mumbai to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000024298",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Mumbai to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000661006",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Netherlands to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000021840",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Netherlands to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000050059",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Salt Lake City to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Salt Lake City to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000003129",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Santiago to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000026990",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sao Paulo to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000053560",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sao Paulo to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000066310",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Seoul to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000043577",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Seoul to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000061691",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Singapore to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000039358",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Singapore to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000058291",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sydney to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000008568",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Sydney to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000013411",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Toronto to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000001118",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Virginia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.5800135136",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Warsaw to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Warsaw to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000000373",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Zurich to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000007451",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Region Ingress from Zurich to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000007078",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Zone Egress",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.2128010754",
+                                                "cost": "0.2021610214",
+                                                "usage": "2.2480306625",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Inter Zone Ingress",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "30.1356258392",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0075495094",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0063010557",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to Australia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000416310",
+                                                "cost": "0.0000395494",
+                                                "usage": "0.0000231471",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to China",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0151221999",
+                                                "cost": "0.0143660895",
+                                                "usage": "0.0069456920",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Americas to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0070424322",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Virginia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0389406939",
+                                                "cost": "0.0369936596",
+                                                "usage": "0.0342807919",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Virginia to APAC",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0097535877",
+                                                "cost": "0.0092659087",
+                                                "usage": "0.0085864086",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Virginia to Australia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0002658889",
+                                                "cost": "0.0002525947",
+                                                "usage": "0.0001478344",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Virginia to China",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0240355168",
+                                                "cost": "0.0228337410",
+                                                "usage": "0.0110396175",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Egress from Virginia to EMEA",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0336914076",
+                                                "cost": "0.0320068374",
+                                                "usage": "0.0296596680",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Americas to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0170302000",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Americas to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.5105077028",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from APAC to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0077302093",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from APAC to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0065142354",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Australia to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0004615486",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from Australia to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0001241351",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from China to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0063516153",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from China to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0082087191",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from EMEA to Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0159065630",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Internet Ingress from EMEA to Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0230574813",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Network Intra Zone Ingress",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "0.0000000000",
+                                                "cost": "0.0000000000",
+                                                "usage": "0.0000005476",
+                                                "unit": "gibibyte"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Spot Preemptible E2 Instance Core running in Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "41.6103292276",
+                                                "cost": "39.5298127660",
+                                                "usage": "671.7705688477",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Spot Preemptible E2 Instance Ram running in Americas",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "22.3092496867",
+                                                "cost": "21.1937872028",
+                                                "usage": "2687.1044921875",
+                                                "unit": "gibibyte hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "SSD backed PD Capacity in Virginia",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "35.4032563423",
+                                                "cost": "33.6330935252",
+                                                "usage": "20.0000000000",
+                                                "unit": "gibibyte month"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Storage PD Capacity",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "26.4975762183",
+                                                "cost": "25.1726974072",
+                                                "usage": "99.9801025391",
+                                                "unit": "gibibyte month"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Kubernetes Engine",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "Zonal Kubernetes Clusters",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "636.1226808027",
+                                                "cost": "604.3165467626",
+                                                "usage": "672.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        },
+                                        {
+                                            "entity": {
+                                                "id": "Zonal Kubernetes Clusters - Free tier discount for GKE",
+                                                "type": "meter",
+                                                "credit_name": "Free tier discount for GKE",
+                                                "is_credit": true
+                                            },
+                                            "data": {
+                                                "price": "-636.1182790610",
+                                                "cost": "-604.3123651079",
+                                                "usage": "28.0000000000",
+                                                "unit": "hour"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Support",
+                                        "type": "category"
+                                    },
+                                    "lines": [
+                                        {
+                                            "entity": {
+                                                "id": "GCP Support Standard Variable fee",
+                                                "type": "meter"
+                                            },
+                                            "data": {
+                                                "price": "41.7584911019",
+                                                "cost": "39.6705665468",
+                                                "usage": "147.2350006104",
+                                                "unit": "USD"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

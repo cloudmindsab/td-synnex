@@ -1,0 +1,4 @@
+userName,email,userType,userStatus,password
+Firstname1 Lastname1,test123@test5.test,OWNER,Active,Password-2025**##
+Firstname2 Lastname2,test123@test6.test,SALES,Active,Password-2025**##
+Firstname3 Lastname3,test123@test7.test,OPS,Active,Password-2025**##
