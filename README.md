@@ -4,7 +4,8 @@
 
 A repository for partners and resellers to TD SYNNEX.
 
-Important information for reseller will not be provided in this repo.
+*Important information for reseller will not be provided in this repo.*  
+
 >[!NOTE]
 >This repository is public for everyone to use at their own risk, no warranties from me or TD SYNNEX. Make solid decisions before using scripts.
 Resellers and partners that want to use the our API's need to activate account in the portal.
@@ -35,7 +36,7 @@ git clone https://git.cloudmindstech.se/td-synnex/public.git
 
 1. Local Powershell Environment
 2. Microsoft Azure CloudShell
-3. Microsoft Azure Automation Environments 5.1 and 7.2
+3. Microsoft Azure Automation Environments 5.1 and 7.2  
 
 > [!TIP]
 > It's recommend using the latest version of PowerShell (Core). For vendor specific scripts use the latest PowerShell Modules.
