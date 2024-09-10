@@ -1,4 +1,4 @@
-# TD Synnex - PUBLIC REPO (EXTERNAL)
+# TD SYNNEX - PUBLIC REPO (EXTERNAL)
 
 **Author: Nicklas Karlsson (Nordic Platform Manager @ TD SYNNEX)**  
 
