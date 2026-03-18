@@ -7,7 +7,7 @@ jobs:
     remoteUrl: https://github.com/cloudmindsab/onedev-mirror-test.git
     userName: cloudmindsab
     passwordSecret: access-token
-    force: false
+    force: true
     condition: SUCCESSFUL
     optional: false
   triggers:
