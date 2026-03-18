@@ -4,7 +4,7 @@ jobs:
   steps:
   - type: PushRepository
     name: Push To GitHub
-    remoteUrl: https://github.com/cloudmindsab/onedev-mirror-test.git
+    remoteUrl: https://github.com/cloudmindsab/td-synnex
     userName: cloudmindsab
     passwordSecret: access-token
     force: true
@@ -13,7 +13,6 @@ jobs:
   triggers:
   - type: BranchUpdateTrigger
     userMatch: anyone
-  - type: TagCreateTrigger
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
