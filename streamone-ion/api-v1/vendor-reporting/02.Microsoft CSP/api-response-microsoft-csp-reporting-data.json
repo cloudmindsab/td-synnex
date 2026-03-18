@@ -1,0 +1,733 @@
+{
+    "success": true,
+    "message": "Report data for the selected period",
+    "currencyOption": {
+        "costCurrency": "SEK",
+        "priceCurrency": "SEK"
+    },
+    "data": [
+        {
+            "entity": {
+                "id": "4022",
+                "type": "customer",
+                "company": "ACMETECH Inc.",
+                "name": "Eric Holler"
+            },
+            "lines": [
+                {
+                    "entity": {
+                        "id": "0fb67be4-d10b-495f-c072-a233ffcf0fb1",
+                        "type": "subscription",
+                        "cost_currency": "SEK",
+                        "price_currency": "SEK"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "Microsoft 365 Business Basic",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Microsoft 365 Business Basic",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "181.7493373722",
+                                        "cost": "163.5744036350",
+                                        "usage": "4.0000000000"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Support",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard - Azure",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "788.8426101221",
+                                        "cost": "0.0000000000",
+                                        "usage": "1.0000000000",
+                                        "unit": "SEK"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "entity": {
+                        "id": "4d9eb36f-7370-4142-c157-ce52fbb63007",
+                        "type": "subscription",
+                        "cost_currency": "SEK",
+                        "price_currency": "SEK"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "A Series VM",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "A1",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "381.6357864445",
+                                        "cost": "343.4722078001",
+                                        "usage": "671.9334106445",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Azure Active Directory Domain Services",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "953.9189699545",
+                                        "cost": "858.5270729591",
+                                        "usage": "671.8133544922",
+                                        "unit": "1/Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Azure Site Recovery",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Azure",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "213.7508708822",
+                                        "cost": "192.3757837940",
+                                        "usage": "0.9032256603",
+                                        "unit": "1/Month"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Backup",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "On Premises Server",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "85.5003483529",
+                                        "cost": "76.9503135176",
+                                        "usage": "0.9032256603",
+                                        "unit": "1/Month"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0295266092",
+                                        "cost": "0.0265739493",
+                                        "usage": "0.0696247965",
+                                        "unit": "1 GB/Month"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Bandwidth",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0000000000",
+                                        "cost": "0.0000000000",
+                                        "usage": "1.3201212883",
+                                        "unit": "1 GB"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Bandwidth Inter-Region",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Inter Continent",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0000000000",
+                                        "cost": "0.0000000000",
+                                        "usage": "0.0331722312",
+                                        "unit": "1 GB"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Intra Continent",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.1394586179",
+                                        "cost": "0.1255127575",
+                                        "usage": "0.7366204262",
+                                        "unit": "1 GB"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Blob Storage",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Hot",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0848031049",
+                                        "cost": "0.0763227944",
+                                        "usage": "0.3318000138",
+                                        "unit": "10K"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Dv2 Series VM",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "D1 v2",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "445.2638137069",
+                                        "cost": "400.7374323362",
+                                        "usage": "671.9666748047",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Dv2 Series Windows VM",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "D1 v2",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "801.4550081030",
+                                        "cost": "721.3095072927",
+                                        "usage": "671.9500732422",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Dv3 Series VM",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "D2 v3",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "610.5870061340",
+                                        "cost": "549.5283055206",
+                                        "usage": "671.9001464844",
+                                        "unit": "1 Hour"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "D4 v3",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "1221.3555471412",
+                                        "cost": "1099.2199924271",
+                                        "usage": "672.0000000000",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Files",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "5.7915576486",
+                                        "cost": "5.2124018838",
+                                        "usage": "11.4367599487",
+                                        "unit": "-"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "General Block Blob",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "1.0076892086",
+                                        "cost": "0.9069202878",
+                                        "usage": "295.7008056641",
+                                        "unit": "10K"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Insight & Analytics",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0000000000",
+                                        "cost": "0.0000000000",
+                                        "usage": "0.3007391691",
+                                        "unit": "1 GB"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "IP Addresses",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Basic",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "76.3347216963",
+                                        "cost": "68.7012495267",
+                                        "usage": "2016.0000000000",
+                                        "unit": "1 Hour"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "31.8061340401",
+                                        "cost": "28.6255206361",
+                                        "usage": "672.0000000000",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Load Balancer",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "159.6771068374",
+                                        "cost": "143.7093961539",
+                                        "usage": "685.6578979492",
+                                        "unit": "-"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Microsoft Def for Servers",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard P2",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "384.7027641045",
+                                        "cost": "346.2324876941",
+                                        "usage": "2032.0000000000",
+                                        "unit": "1/Hour"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Premium Files",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Premium",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "681.5591427489",
+                                        "cost": "613.4032284741",
+                                        "usage": "449.9994201660",
+                                        "unit": "1 GB/Month"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Premium Page Blob",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "P10",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "373.1302264294",
+                                        "cost": "335.8172037864",
+                                        "usage": "1.9998719692",
+                                        "unit": "1/Month"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Premium SSD Managed Disks",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "P10",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "373.1302264294",
+                                        "cost": "335.8172037864",
+                                        "usage": "1.9998719692",
+                                        "unit": "1/Month"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "P4",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "195.3680333207",
+                                        "cost": "175.8312299886",
+                                        "usage": "3.9997439384",
+                                        "unit": "1/Month"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Standard HDD Managed Disks",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "S10",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "111.2999209390",
+                                        "cost": "100.1699288451",
+                                        "usage": "1.9968960285",
+                                        "unit": "1/Month"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "S4",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "2.3192540704",
+                                        "cost": "2.0873286634",
+                                        "usage": "490.0119934082",
+                                        "unit": "10K"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Standard Page Blob",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "59.7415545153",
+                                        "cost": "53.7673990638",
+                                        "usage": "357.5867919922",
+                                        "unit": "-"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Standard SSD Managed Disks",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "E10",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "90.8688527073",
+                                        "cost": "81.7819674366",
+                                        "usage": "0.9999359846",
+                                        "unit": "1/Month"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "E30",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "726.9508216585",
+                                        "cost": "654.2557394926",
+                                        "usage": "0.9999359846",
+                                        "unit": "1/Month"
+                                    }
+                                },
+                                {
+                                    "entity": {
+                                        "id": "E4",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "14.2462362741",
+                                        "cost": "12.8216126467",
+                                        "usage": "752.4862060547",
+                                        "unit": "10K"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Tables",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "0.0438820712",
+                                        "cost": "0.0394938641",
+                                        "usage": "5.5979018211",
+                                        "unit": "-"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "VPN Gateway",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "VpnGw1",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "1208.6330935252",
+                                        "cost": "1087.7697841726",
+                                        "usage": "672.0000000000",
+                                        "unit": "1 Hour"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "entity": {
+                        "id": "618d626c-56ce-4d90-da51-1de671ed2a2d",
+                        "type": "subscription",
+                        "cost_currency": "SEK",
+                        "price_currency": "SEK"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "Microsoft 365 E3",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Microsoft 365 E3",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "363.4986747444",
+                                        "cost": "327.1488072700",
+                                        "usage": "3.0000000000"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entity": {
+                                "id": "Support",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Standard - Azure",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "1577.6852202451",
+                                        "cost": "0.0000000000",
+                                        "usage": "1.0000000000",
+                                        "unit": "SEK"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "entity": {
+                        "id": "ca780315-76ce-4027-d9be-956fec629e79",
+                        "type": "subscription",
+                        "cost_currency": "SEK",
+                        "price_currency": "SEK"
+                    },
+                    "lines": [
+                        {
+                            "entity": {
+                                "id": "Microsoft 365 E5",
+                                "type": "product"
+                            },
+                            "lines": [
+                                {
+                                    "entity": {
+                                        "id": "Microsoft 365 E5",
+                                        "type": "sku"
+                                    },
+                                    "data": {
+                                        "price": "714.3127603181",
+                                        "cost": "642.8814842862",
+                                        "usage": "2.0000000000"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

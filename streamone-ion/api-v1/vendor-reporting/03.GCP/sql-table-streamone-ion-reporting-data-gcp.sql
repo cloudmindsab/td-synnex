@@ -1,0 +1,23 @@
+CREATE TABLE [dbo].[Partner_ION_GCP_Billing_Data]
+(
+    [ID]	int IDENTITY(1,1) PRIMARY KEY
+	,[date]	       NVARCHAR(20)
+	,[customerName]	NVARCHAR(50)
+    ,[customerId]	       NVARCHAR(10)
+    ,[contactName]	NVARCHAR(70)
+	,[billingMonth]	NVARCHAR(20)
+    ,[CSP]	              NVARCHAR(30)
+    ,[subscriptionID]	NVARCHAR(70)
+    ,[resourceType]	NVARCHAR(50)
+	,[SKU]	              NVARCHAR(70)
+    ,[SKUType]	       NVARCHAR(70)
+    ,[category]	       NVARCHAR(70)
+    ,[AZUsage]	       NVARCHAR(10)
+    ,[MWPUsage]	       NVARCHAR(20)
+    ,[cost]	       NVARCHAR(30)
+    ,[price]	       NVARCHAR(30)
+    ,[profit]	       NVARCHAR(30)
+    ,[markup]	       NVARCHAR(30)
+    ,[margin]	       NVARCHAR(30)
+	,[currency]	       NVARCHAR(10)
+)
