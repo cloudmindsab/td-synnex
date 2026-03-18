@@ -1,0 +1,20 @@
+version: 46
+jobs:
+- name: Push To Github
+  steps:
+  - type: PushRepository
+    name: Push To GitHub
+    remoteUrl: https://github.com/cloudmindsab/onedev-mirror-test.git
+    userName: cloudmindsab
+    passwordSecret: access-token
+    force: false
+    condition: SUCCESSFUL
+    optional: false
+  triggers:
+  - type: BranchUpdateTrigger
+    userMatch: anyone
+  - type: TagCreateTrigger
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 14400
